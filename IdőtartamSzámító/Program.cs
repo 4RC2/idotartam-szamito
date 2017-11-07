@@ -152,7 +152,7 @@ namespace IdőtartamSzámító
 
             típusMegfelelő = int.TryParse(bevittKarakterek, out eseményNap);
 
-            if (típusMegfelelő == true && Int32.Parse(bevittKarakterek) > 0 && Int32.Parse(bevittKarakterek) < 32)
+            if (típusMegfelelő == true && Int32.Parse(bevittKarakterek) > 0 && Int32.Parse(bevittKarakterek) <= DateTime.DaysInMonth(eseményÉv, eseményHónap))
             {
                 eseményNap = Int32.Parse(bevittKarakterek);
             }
